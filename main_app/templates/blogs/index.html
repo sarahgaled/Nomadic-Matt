@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/Blogs-index.css' %}"
+/>
+{% endblock %} {% block content %}
+
+<section class="page-header">
+  <h1>Blogs List</h1>
+  {% comment %} <img src="{% static 'images/cool-cat.svg' %}" alt="A cool cat" />
+  <img src="{% static 'images/happy-cat.svg' %}" alt="A happy cat" />
+  <img src="{% static 'images/teacup-cat.svg' %}" alt="A cat in a teacup" />
+  <img src="{% static 'images/cat-in-box.svg' %}" alt="A cat in a box" /> {% endcomment %}
+</section>
+
+<section class="card-container">
+  {% for blog in blogs %}
+  <div class="card">
+  <a href="{% url 'blogs_detail' blog.id %}">
+    <div class="card-content">
+      <div class="card-img-container">
+        <img src="" alt="">
+      </div> 
+      <h2 class="card-title">{{blog.place}}</h2>
+      {% if blog.place > 0 %}
+      <p>I went to {{blog.place}} on {{blog.date}} and it was {{blog.description}}</p>
+      {% else %}
+      <p>I never went to {{blog.place}}</p>
+      {% endif %}
+      <p><small>{{blog.description}}</small></p>
+    </div>
+    </a>
+  </div>
+  {% endfor %}
+</section>
+
+{% endblock %}
