@@ -1,17 +1,20 @@
-{% extends 'base.html' %} {% load static %} {% block head %}
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block head %}
 <link
   rel="stylesheet"
   type="text/css"
-  href="{% static 'css/Blogs-index.css' %}"
+  href="{% static 'css/blogs-index.css' %}"
 />
-{% endblock %} {% block content %}
+{% endblock %} 
+
+{% block content %}
 
 <section class="page-header">
   <h1>Blogs List</h1>
-  {% comment %} <img src="{% static 'images/cool-cat.svg' %}" alt="A cool cat" />
-  <img src="{% static 'images/happy-cat.svg' %}" alt="A happy cat" />
-  <img src="{% static 'images/teacup-cat.svg' %}" alt="A cat in a teacup" />
-  <img src="{% static 'images/cat-in-box.svg' %}" alt="A cat in a box" /> {% endcomment %}
+  {% comment %} <img src="{% static 'images/add-a-picture.svg' %}" alt="picture" />
+  {% endcomment %}
 </section>
 
 <section class="card-container">
@@ -23,11 +26,11 @@
         <img src="" alt="">
       </div> 
       <h2 class="card-title">{{blog.place}}</h2>
-      {% if blog.place > 0 %}
-      <p>I went to {{blog.place}} on {{blog.date}} and it was {{blog.description}}</p>
-      {% else %}
+      {% comment %} {% if blog.place > 0 %} {% endcomment %}
+      <p>I went to {{blog.place}} on {{blog.date}} and it {{blog.description}}</p>
+      {% comment %} {% else %} {% endcomment %}
       <p>I never went to {{blog.place}}</p>
-      {% endif %}
+      {% comment %} {% endif %} {% endcomment %}
       <p><small>{{blog.description}}</small></p>
     </div>
     </a>
