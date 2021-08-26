@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Blog
 
 
@@ -21,3 +21,12 @@ def blogs_detail(request, blog_id):
 class BlogCreate(CreateView):
     model = Blog
     fields = '__all__'
+    success_url = '/blogs/'
+
+class BlogUpdate(UpdateView):
+    model = Blog
+    fields = ['description', 'date']
+
+class BlogDelete(DeleteView):
+    model = Blog
+    success_url = '/blogs/'
