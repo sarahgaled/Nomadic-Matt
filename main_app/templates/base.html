@@ -28,8 +28,9 @@
     </div>
     <nav>
       <ul>
-        <li><a href="/places">All Places</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a href="{% url 'blogs_index' %}">All Blogs</a></li>
+        <li><a href="{% url 'blogs_create' %}">Add a Blog</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
       </ul>
     </nav>
   </header>
