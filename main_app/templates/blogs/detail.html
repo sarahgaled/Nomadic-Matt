@@ -18,7 +18,10 @@
 <h1>{{blog.place}}</h1>
 <p>{{blog.description}}</p>
 <p>{{blog.date}}</p>
-
+<div class="blog-actions">
+      <a href="{% url 'blogs_update' blog.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'blogs_delete' blog.id %}" class="btn danger">Delete</a>
+    </div>
 </div>
 </section>
 {% endblock %}
