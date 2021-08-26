@@ -1,16 +1,23 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
+from .models import Blog
 
-# Add the following import
-from django.http import HttpResponse
 
 # Define the home view
 def home(request):
-  return HttpResponse('<h1>Hello ᓚᘏᗢ</h1>')
+  return render(request, 'home.html')
 
 def about(request):
     return render(request, 'about.html')
 
-def places_index(request):
-    return render(request, 'places/index.html', {'places': places})
+def blogs_index(request):
+    blogs = Blog.objects.all()
+    return render(request, 'blogs/index.html', {'blogs': blogs})
 
+def blogs_detail(request, blog_id):
+    blog = Blog.objects.get(id=blog_id)
+    return render (request, 'blogs/detail.html', {'blog': blog })
 
+class BlogCreate(CreateView):
+    model = Blog
+    fields = '__all__'
