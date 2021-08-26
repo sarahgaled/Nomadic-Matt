@@ -28,9 +28,15 @@
     </div>
     <nav>
       <ul>
+      {% if user.is_authenticated %}
         <li><a href="{% url 'blogs_index' %}">All Blogs</a></li>
         <li><a href="{% url 'blogs_create' %}">Add a Blog</a></li>
         <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'logout' %}">Log out</a></li>
+      {% else %}
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'home' %}">Login</a></li>
+      {% endif %}
       </ul>
     </nav>
   </header>
