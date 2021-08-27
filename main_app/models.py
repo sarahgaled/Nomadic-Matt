@@ -17,3 +17,9 @@ class Blog(models.Model):
     def get_absolute_url(self):
         return reverse("blogs_detail", kwargs={"blog_id": self.id})
     
+class Photo(models.Model):
+    url = models.CharField(max_length=250)
+    blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"Photo for blog_id: {self.blog_id} @{self.url}"

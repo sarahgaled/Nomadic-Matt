@@ -20,10 +20,21 @@
 <section class="card-container">
   {% for blog in blogs %}
   <div class="card">
-  <a href="{% url 'blogs_detail' blog.id %}">
-    <div class="card-content">
-      <div class="card-img-container">
-        <img src="" alt="">
+    <a href="{% url 'blogs_detail' blog.id %}">
+      <div class="card-content">
+        <div class="card-img-container">
+        {% if blog.photo.url %}
+              <img 
+                src="{{blog.photo.url}}" 
+                alt="A photo of {{blog.place}}"
+                class="usr-img"
+              >
+            {% else %}
+              {% comment %} <img 
+                src="{% static 'images/sk8r-boi-cat.svg' %}" 
+                alt="A skater boy cat"
+              > {% endcomment %}
+            {% endif %}
       </div> 
       <h2 class="card-title">{{blog.place}}</h2>
       {% comment %} {% if blog.place > 0 %} {% endcomment %}
