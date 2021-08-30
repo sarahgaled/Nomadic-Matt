@@ -16,7 +16,7 @@
 
 <div class="blog-details">
 <div class="place">
-<h1>{{blog.place}}</h1>
+<p>{{blog.place}}<p>
 </div>
 <div class="description">
 <p>{{blog.description}}</p>
@@ -27,7 +27,7 @@
       <a href="{% url 'blogs_delete' blog.id %}" class="btn danger">Delete</a>
     </div>
     <div class="blog-img">
-<h3 class="trip-photos">Trip Photos</h3>
+<p class="trip-photos">Trip Photos</p>
 {% if blog.photo_set.all.count %}
           {% for photo in blog.photo_set.all %}
           <div class="image-container">
@@ -43,7 +43,7 @@
       <p class="subsection-section">Add your trip photos here!</p>
     {% endif %} 
 </div>
-    <h3>Add {{ blog.photo.url }} images</h3>
+    <p>{{ blog.photo.url }}</p>
     <div class="photo-upload">
     <div class="file-name"><p id="file-name"></p></div>
     <form 
