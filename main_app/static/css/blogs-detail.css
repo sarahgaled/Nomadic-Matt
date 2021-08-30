@@ -50,8 +50,8 @@ body{
   max-width: 100%;
 }
 
-.place{
-  border-bottom: 2px solid #183658;
+div.place{
+  font-size: 50px;
 }
 
 .image{
@@ -82,11 +82,16 @@ h3{
 }
 
 .trip-photos{
-  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 2.5rem;
 }
 
 .photo-upload{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
   margin-top: 1rem;
@@ -109,7 +114,7 @@ h3{
   }
   
 #file-name {
-    margin-bottom: 50px;
+    margin-right: 10px;
     /* display: flex;
     justify-content: center;
     align-items: center;
