@@ -42,7 +42,7 @@ class BlogCreate(LoginRequiredMixin, CreateView):
 class BlogUpdate(LoginRequiredMixin, UpdateView):
     model = Blog
     fields = ['description', 'date']
-    success_url = '/blogs/'
+    # success_url = '/blogs/'
 
 class BlogDelete(LoginRequiredMixin, DeleteView):
     model = Blog
