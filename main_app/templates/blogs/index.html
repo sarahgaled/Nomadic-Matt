@@ -36,13 +36,10 @@
               > {% endcomment %}
             {% endif %}
       </div> 
-      <h2 class="card-title">{{blog.place}}</h2>
-      {% comment %} {% if blog.place > 0 %} {% endcomment %}
-      <p>I went to {{blog.place}} on {{blog.date}} and it {{blog.description}}</p>
-      {% comment %} {% else %} {% endcomment %}
-      <p>I never went to {{blog.place}}</p>
-      {% comment %} {% endif %} {% endcomment %}
-      <p><small>{{blog.description}}</small></p>
+      <div class="title">
+      <h2>{{blog.place}}</h2>
+      </div>
+      <p>{{blog.date}}</p>  
     </div>
     </a>
   </div>
@@ -50,3 +47,4 @@
 </section>
 
 {% endblock %}
+
