@@ -1,3 +1,5 @@
+console.log('is this working?')
+
 const dateInput = document.getElementById('id_date')
 const fileInput = document.getElementById('file-input')
 const fileName = document.getElementById('file-name')
@@ -19,6 +21,8 @@ const picker = MCDatepicker.create({
   selectedDate: new Date(),
   autoClose: true,
 })
+
+console.log(dateInput)
 
 dateInput.addEventListener("click", (evt) => {
   picker.open()
