@@ -13,22 +13,16 @@
   > {% endcomment %}
   <title>SJ's Travel Blog</title>
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   {% block head %}
   {% endblock %}
 </head>
 <body>
-  <header>
-    <div class="header-logo-container">
-      <a href="/">
-        {% comment %} <img 
-          src="" 
-          alt="The Cat Collector Logo"
-        > {% endcomment %}
-      </a>
-    </div>
-    <nav>
-      <ul>
-      {% if user.is_authenticated %}
+<section>
+<header>
+  <nav>
+    <ul>
+    {% if user.is_authenticated %}
         <li><a href="{% url 'blogs_index' %}">All Blogs</a></li>
         <li><a href="{% url 'blogs_create' %}">Add a Blog</a></li>
         <li><a href="{% url 'about' %}">About</a></li>
@@ -37,13 +31,14 @@
         <li><a href="{% url 'about' %}">About</a></li>
         <li><a href="{% url 'home' %}">Login</a></li>
         <li><a href="{% url 'signup' %}">Sign Up</a></li>
-      {% endif %}
-      </ul>
-    </nav>
+{% endif%}
+    </ul>
+  </nav>
   </header>
   <main>
     {% block content %}
     {% endblock %}
   </main>
+  </section>
 </body>
 </html>
