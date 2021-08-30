@@ -1,5 +1,3 @@
-console.log('is this working?')
-
 const dateInput = document.getElementById('id_date')
 const fileInput = document.getElementById('file-input')
 const fileName = document.getElementById('file-name')
