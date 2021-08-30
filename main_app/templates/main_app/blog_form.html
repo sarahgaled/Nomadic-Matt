@@ -15,17 +15,14 @@
 {% endblock %}
 
 {% block content %}
-
+<div class="page-header">
 {% if object %}
     <h1>Edit {{object.place}}</h1>
   {% else %}
-    
-  {% endif %}
-<div class="page-header">
     <h1>Add a Blog</h1>
-    {% comment %} <img src="{% static 'images/nerd-cat.svg' %}" alt="A cat using a computer"/> {% endcomment %}
-</div>
-<form action="" method="post" class="form-container">
+  {% endif %}
+  </div>
+<form action="" method="post" class="form-container" autocomplete="off">
     {% csrf_token %}
 <table>
     {{ form.as_table }}
