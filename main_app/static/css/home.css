@@ -14,13 +14,14 @@ body{
   overflow: hidden;
 }
 
-.container{
+.home{
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
 }
 
-.formBx{
+/* .formBx{
   position: absolute;
   top: 20%;
   left: 70%;
@@ -29,7 +30,7 @@ body{
   margin-bottom: 20rem;
   width: 30%;
 
-}
+} */
 
 form{
   max-width: 100%;
@@ -83,6 +84,10 @@ main > section {
   align-items: center;
   width: 100%;
   height: 100%;
+  border: rgb(212, 147, 62) solid 2px;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: rgb(236, 181, 77);
 }
 
 .login h1 {
@@ -119,14 +124,6 @@ ul.errorlist.nonfield{
 
 
 @media only screen and (min-width: 768px) {
-
-  .login {
-    border: rgb(212, 147, 62) solid 2px;
-    padding: 20px;
-    border-radius: 6px;
-    background-color: rgb(236, 181, 77);
-  }
-
   .formBx{
     display: flex;
     flex-direction: column;
