@@ -6,24 +6,28 @@
 {% endblock %}
 
 {% block content %}
-<section class="logo-container">
-<img src="" alt="">
-<img src="" alt="">
-</section>
-
-</section>
-
+<div class="container">
+<div class="home">
+  <div class="imgBx">
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets2.lottiefiles.com/packages/lf20_bhebjzpu.json"  background="transparent"  speed="1"  style="width: 100vw; height: 750px;"  loop autoplay></lottie-player>
+</div>
+  <div class="contentBx">
+  <div class="formBx">
 {% if not user.is_authenticated %}
-<section>
-  <form action="{% url 'home' %}" method="post" class="login">
+<div class="login-form">
+  <form action="{% url 'home' %}" method="post" autocomplete="off" class="login" >
     <h1>Login</h1>
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="hidden" name="next" value="{{ next }}">
+    <input type="hidden" name="next" value="{{ next }}" autocomplete="false" >
     <button type="submit" class="btn submit">Login</button>
   </form>
-</section>
-{% endif %}
+  </div>
+  </div>
+{% endif %} 
 
-
+  </div>
+</div>
+</div>
 {% endblock %}
