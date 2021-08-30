@@ -61,8 +61,9 @@ main {
 .lottie{
   width: 50vw;
   height: 100%;
-  margin-left: -610px;
+  margin-left: -400px;
   margin-top: 150px;
+  display: none;
 }
 
 main > section {
@@ -136,6 +137,11 @@ ul.errorlist.nonfield{
     margin-left: -100px;
     margin-bottom: 20rem;
     width: 30%;
+  }
+
+  .lottie{
+    display: block;
+    
   }
 
 }
