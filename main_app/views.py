@@ -32,7 +32,7 @@ def blogs_detail(request, blog_id):
 
 class BlogCreate(LoginRequiredMixin, CreateView):
     model = Blog
-    fields = '__all__'
+    fields = ['place', 'date', 'description']
     success_url = '/blogs/'
 
     def form_valid(self, form):
@@ -48,6 +48,7 @@ class BlogDelete(LoginRequiredMixin, DeleteView):
     model = Blog
     success_url = '/blogs/'
 
+@login_required
 def add_photo(request, blog_id):
     photo_file = request.FILES.get('photo-file', None)
     if photo_file:
@@ -57,14 +58,18 @@ def add_photo(request, blog_id):
             s3.upload_fileobj(photo_file, BUCKET, key)
             url = f"{S3_BASE_URL}{BUCKET}/{key}"
             photo = Photo(url=url, blog_id=blog_id)
-            blog_photo = Photo.objects.filter(blog_id=blog_id)
-            if blog_photo.first():
-                blog_photo.first().delete()
+            
             photo.save()
         except Exception as err:
             print('An error occurred uploading file to S3: %s' % err)
     return redirect('blogs_detail', blog_id=blog_id)
 
+@login_required
+def delete_photo(request, photo_id, blog_id):
+    photo = Photo.objects.get(id=photo_id)
+    photo.delete()
+    return redirect('blogs_detail', blog_id=blog_id)
+    
 def signup(request):
     error_message = ''
     if request.method == 'POST':
