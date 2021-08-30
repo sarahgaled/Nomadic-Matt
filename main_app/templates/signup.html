@@ -2,24 +2,26 @@
 {% load static %}
 
 {% block head %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}"/>
 {% endblock %}
 
 {% block content %}
-
+<div class="home">
 <div class="page-header">
+<div class="formBx">
   <h1>Sign Up</h1>
-  {% comment %} <img src="{% static 'images/nerd-cat.svg' %}" alt="A cat using a computer"/> {% endcomment %}
 </div>
 {% if error_message %}
   <p class="red-text">{{ error_message }}</p>
 {% endif %}
 <form action="" method="post" class="form-container" autocomplete="off">
   {% csrf_token %}
-  <table>
-    {{ form.as_table }}
-  </table>
+    <div class="inputBx">{{ form.as_p }}</div>
+  <div class="inputBx">
   <button type="submit" class="btn submit">Submit!</button>
+  </div>
+  </div>
 </form>
+</div>
 
 {% endblock %}
