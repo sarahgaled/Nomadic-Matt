@@ -160,12 +160,12 @@ input{
       z-index: 1;
   }
 
- .home .formBx{
+ /* .home .formBx{
       width: 100%;
       padding: 40px;
       background: rgba(255 255 255 /0.9);
       margin: 50px;
-  }
+  } */
 }
 
 label, p{
