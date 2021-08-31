@@ -43,5 +43,5 @@ Nomadic Matt is a blog for the user that is in love with traveling and wants to 
 - lottiefiles.com
 
 #### Next Steps:
-- Better styling
+- Styling improvements
 
