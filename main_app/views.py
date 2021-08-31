@@ -27,8 +27,8 @@ def blogs_index(request):
 
 @login_required
 def blogs_detail(request, blog_id):
-    blog = Blog.objects.get(id=blog_id)
-    return render (request, 'blogs/detail.html', {'blog': blog})
+    blog = Blog.objects.get(id=blog_id) #using the method to obtain the blog obj by its id
+    return render (request, 'blogs/detail.html', {'blog': blog}) #detail template and passing data in the dictionary in the render
 
 class BlogCreate(LoginRequiredMixin, CreateView):
     model = Blog
