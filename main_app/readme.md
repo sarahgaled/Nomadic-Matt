@@ -1,7 +1,7 @@
 ![](images/../static/images/nmBanner.jpg)
 
 Nomadic Matt is an app for the person who can't sit in their chair for more than 5 minutes. The app is for all the curious cats of the world who dare to go on a mission and document it. 
-Nomadic Matt is a blog for the user that is in love with traveling and wants to properly document it. Kinda like having an online journal. A user can create a blog for every place they visit. Even the kitchen for a late night snack, and document it! Or not... whatever. A user can edit their entries as well as delete them. A use can add and delete pictures pictures as well. 
+Nomadic Matt is a blog for the user that is in love with traveling and wants to properly document it. Kinda like having an online journal. A user can create a blog for every place they visit. Even the kitchen for a late night snack, and document it! Or not... whatever. A user can edit their entries as well as delete them. A user can add and delete pictures as well. 
 
 ## Getting Started
 
