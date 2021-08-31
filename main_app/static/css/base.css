@@ -30,14 +30,17 @@ nav{
   color: black;
   z-index: 5
 }
-/* nav .logo{
+nav .logo{
   float: left;
-  color: black;
-  font-size: 1.5rem;
+  /* color: black; */
+  color: var(--text);
+  font-size: 3.5rem;
   font-weight: 600;
   line-height: 4.37rem ;
   padding-left: 6rem;
-} */
+  margin-top: 20px;
+}
+
 nav:after{
   content: "";
   clear: both;
@@ -53,6 +56,7 @@ nav ul{
   position: relative;
   margin-right: 3rem;
   margin-top: 1rem;
+  /* padding-top: 50px; */
 }
 nav li{
   position: relative;
@@ -98,4 +102,15 @@ transition: all ease-in-out 600ms;
 
 .ul{
   list-style: none;
+}
+
+/* .logo{
+  margin-left: 30px;
+  margin-top: 30px; 
+  font-size: 50px;
+  margin-right: 10px;
+} */
+
+.fa-route{
+  margin-right: 15px;
 }
