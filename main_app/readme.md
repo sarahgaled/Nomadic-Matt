@@ -33,10 +33,9 @@ Nomadic Matt is a blog for the user that is in love with traveling and wants to 
 #### Technologies and sites used:
 - Javascript
 - CSS
-- MongoDB
-- Express
-- Mongoose
-- Node.js
+- HTML
+- Python
+- Django
 - Django auth
 - Unsplash
 - Google fonts
