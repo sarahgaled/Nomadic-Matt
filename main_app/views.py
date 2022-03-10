@@ -27,8 +27,8 @@ def blogs_index(request):
 
 @login_required
 def blogs_detail(request, blog_id):
-    blog = Blog.objects.get(id=blog_id) #using the method to obtain the blog obj by its id
-    return render (request, 'blogs/detail.html', {'blog': blog}) #detail template and passing data in the dictionary in the render
+    blog = Blog.objects.get(id=blog_id) 
+    return render (request, 'blogs/detail.html', {'blog': blog})  
 
 class BlogCreate(LoginRequiredMixin, CreateView):
     model = Blog
@@ -36,7 +36,7 @@ class BlogCreate(LoginRequiredMixin, CreateView):
     success_url = '/blogs/'
 
     def form_valid(self, form):
-        form.instance.user = self.request.user
+        form.instance.user = self.request.user 
         return super().form_valid(form)
 
 class BlogUpdate(LoginRequiredMixin, UpdateView):
